@@ -9,7 +9,11 @@ export const DaysGrid = () => {
   return (
     <div className="grid grid-rows-7 grid-flow-col gap-3">
       {summaryDays.map((day, index) => (
-        <HabitDay key={day.toString()} />
+        <HabitDay
+          key={day.toString()}
+          amount={8}
+          completed={Math.round(Math.random() * 5)}
+        />
       ))}
 
       {amountOfDaysToFill > 0
